@@ -1,12 +1,13 @@
-import React from 'react';
+import React,{ useRef, useState }  from 'react';
 import "../styles/Cards.css";
 
 
 const News = () => {
 
-
+  
   return (
     <>
+
       <img
         src="images/freeg-97.jpg"
         className="w-100 mt-0"
@@ -56,6 +57,11 @@ const News = () => {
       </div>
       <img src="images/6452.jpeg" className=" container d-flex justify-content-center mb-4" id="images143" style={{ width: "600px", height: "350px", }}></img>
 
+      
+    <div>
+      
+    </div>
+  
      
     </>
   );

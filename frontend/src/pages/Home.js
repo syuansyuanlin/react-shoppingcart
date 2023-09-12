@@ -5,11 +5,12 @@ import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import { Button, CardActionArea, CardActions } from "@mui/material";
 import "../styles/Cards.css";
-import Footer from "../layout/Footer";
+import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
+import AOS from 'aos';
+import 'aos/dist/aos.css'; // 导入AOS的样式文件
 
 const Home = () => {
-
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -29,6 +30,14 @@ const Home = () => {
     };
   }, []);
 
+  useEffect(() => {
+    AOS.init({
+      duration: 1200, // 动画持续时间（以毫秒为单位）
+      // easing: 'ease-in-out', // 缓动函数
+      once: true // 是否只执行一次
+    });
+  }, []); // [] 作为第二个参数，确保 useEffect 只在组件加载时运行一次
+
   return (
     <>
       <div className="mt-5" style={{ backgroundColor: "#F5F5F5" }}>
@@ -46,29 +55,38 @@ const Home = () => {
             每一層蛋糕都蘊藏著愛與甜蜜，為你的時刻增添幸福滋味，愜意享受每個美味瞬間。
           </h5>
         </div>
-        <div class="content-wrapper">
-          
+        
+        <div data-aos="fade-right"  data-aos-offset="600" class="content-wrapper">
           <div class="grid-container">
             <div class="image-container">
               <img src="images/84774.jpeg" class="images84774" />
             </div>
-            <div class="text-content">
-            <img className="p-3" src="https://j-croissant.jp/wp/wp-content/themes/j-croissant/assets/img/quality/quality_1.svg" alt="" />
+            <div   class="text-content">
+              <img 
+                className="p-3"
+                src="https://j-croissant.jp/wp/wp-content/themes/j-croissant/assets/img/quality/quality_1.svg"
+                alt=""
+              />
               <p className="container">
-              混合了來自北海道和長野縣的三種小麥粉，包括全麥麵粉，
+                混合了來自北海道和長野縣的三種小麥粉，包括全麥麵粉，
                 <br />
                 具有獨特的黃金比例，最能突出麵團的鮮味。
               </p>
             </div>
           </div>
         </div>
-        <div class="content-wrapper">
+        
+        <div data-aos="fade-left"  data-aos-offset="700" class="content-wrapper">
           <div class="grid-container1">
             <div class="image-container">
               <img src="images/79383.jpeg" class="images84774" />
             </div>
             <div class="text-content">
-            <img className="p-3" src="https://j-croissant.jp/wp/wp-content/themes/j-croissant/assets/img/quality/quality_2.svg" alt="" />
+              <img
+                className="p-3"
+                src="https://j-croissant.jp/wp/wp-content/themes/j-croissant/assets/img/quality/quality_2.svg"
+                alt=""
+              />
               <p className="container">
                 選用當季新鮮水果、堅持使用在地小農種植的天然食材，
                 <br />
@@ -77,19 +95,24 @@ const Home = () => {
             </div>
           </div>
         </div>
-        <div class="grid-container">
-            <div class="image-container">
-              <img src="images/photo-79.webp" class="images84774" />
-            </div>
-            <div class="text-content">
-            <img className="p-3" src="https://j-croissant.jp/wp/wp-content/themes/j-croissant/assets/img/quality/quality_3.svg" alt="" />
-              <p className="container">
-              純糖僅由奄美群島的甘蔗原料製成，並緩慢烘烤以形成天然晶體，
-                <br />
-                因此富含礦物質並緊緊鎖住風味。 這是一種溫和的天然甜味。
-              </p>
-            </div>
+       
+        <div data-aos="fade-right"  data-aos-offset="800" class="grid-container">
+          <div class="image-container">
+            <img src="images/photo-79.webp" class="images84774" />
           </div>
+          <div class="text-content">
+            <img
+              className="p-3"
+              src="https://j-croissant.jp/wp/wp-content/themes/j-croissant/assets/img/quality/quality_3.svg"
+              alt=""
+            />
+            <p className="container">
+              純糖僅由奄美群島的甘蔗原料製成，並緩慢烘烤以形成天然晶體，
+              <br />
+              因此富含礦物質並緊緊鎖住風味。 這是一種溫和的天然甜味。
+            </p>
+          </div>
+        </div>
         <div className=" mt-5  text-center">
           <h4>最新消息</h4>
         </div>
@@ -194,6 +217,24 @@ const Home = () => {
             </CardActions>
           </Card>
         </div>
+        <br />
+        <div className="container" style={{ backgroundColor: "#F1F6F9" }}>
+          <img
+            className="container"
+            src="images/114714.png"
+            style={{ width: "200vh" }}
+            alt=""
+          />
+          <div className="container">
+            生活就像一塊美味的蛋糕，每一層都充滿了驚喜與喜悅，而甜蜜的滋味會一直留在我們心中。
+          </div>
+          <button className="">
+            <Link className="" to="Cards">
+              查看商品
+            </Link>
+          </button>
+        </div>
+      
       </div>
     </>
   );

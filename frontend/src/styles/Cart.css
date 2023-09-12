@@ -1,4 +1,9 @@
-tbody, td, tfoot, th, thead, tr {
+tbody,
+td,
+tfoot,
+th,
+thead,
+tr {
     border-style: none !important;
     text-align: center;
 }
@@ -7,7 +12,7 @@ tbody, td, tfoot, th, thead, tr {
     margin-left: 20px;
     margin-bottom: 10px;
     display: flex;
-    
+
     /* float: right; */
 }
 
@@ -17,14 +22,14 @@ input[type="date"]::-webkit-clear-button {
 }
 
 /* Removes the spin button */
-input[type="date"]::-webkit-inner-spin-button { 
+input[type="date"]::-webkit-inner-spin-button {
     display: none;
 }
 
 /* Always display the drop down caret */
 input[type="date"]::-webkit-calendar-picker-indicator {
     color: #ccc;
-    content: '\00d7';
+    content: "\00d7";
 }
 
 /* A few custom styles for date inputs */
@@ -34,15 +39,16 @@ input[type="date"] {
     color: #95a5a6;
     font-family: "Helvetica", arial, sans-serif;
     font-size: 18px;
-    border:1px solid #ecf0f1;
-    background:#ecf0f1;
-    padding:5px;
+    border: 1px solid #ecf0f1;
+    background: #ecf0f1;
+    padding: 5px;
     display: inline-block !important;
     visibility: visible !important;
     border-radius: 5px !important;
 }
 
-input[type="date"], focus {
+input[type="date"],
+focus {
     color: #95a5a6;
     box-shadow: none;
     -webkit-box-shadow: none;
@@ -51,10 +57,10 @@ input[type="date"], focus {
 
 .deliverytime {
     background-color: #ecf0f1;
-    border:3px solid #ecf0f1;
-    padding:6px;
-   color: #95a5a6;
-   border-radius: 5px !important;
+    border: 3px solid #ecf0f1;
+    padding: 6px;
+    color: #95a5a6;
+    border-radius: 5px !important;
 }
 .datecontainer {
     display: flex;
@@ -65,14 +71,18 @@ input[type="date"], focus {
 }
 .cartnote {
     margin-left: 30px;
-  
 }
 #contentnote {
     border-radius: 10px !important;
     background-color: #f2f2f0;
     border: none;
-    
 }
-input:focus, textarea:focus, select:focus {
-    outline: 1px solid #3F2E3E; /* 设置选取框的颜色和样式 */
+input:focus,
+textarea:focus,
+select:focus {
+    outline: 1px solid #3f2e3e; /* 设置选取框的颜色和样式 */
 }
+
+
+  
+ 
