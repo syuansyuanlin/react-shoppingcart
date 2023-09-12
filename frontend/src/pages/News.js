@@ -1,36 +1,55 @@
 import React, { useRef, useState, useEffect } from "react";
 import "../styles/Cards.css";
-import AOS from 'aos';
-import 'aos/dist/aos.css'; // 导入 AOS 的样式文件
+import AOS from "aos";
+import "aos/dist/aos.css"; // 导入 AOS 的样式文件
 
 const News = () => {
-
   useEffect(() => {
     AOS.init({
       duration: 1200, // 动画持续时间（以毫秒为单位）
-      once: true // 是否只执行一次
+      once: true, // 是否只执行一次
     });
-  }, []); // [] 
+  }, []); // []
 
   return (
     <>
-      <br />
-      <br />
-      <br />
-      <br />
+      <div className="banner">
+        <div className="container" id="container01">
+          <div className="bannerText">
+            <h1 data-aos="zoom-in" style={{color:"#331D2C"}}>
+              おいしい幸せをお届けしたい
+              <small>「ワクワク」するメニューづくり</small>
+            </h1>
+            <p data-aos="zoom-in"  style={{color:"#331D2C"}}>
+              いつお店にいらっしゃってもワクワクしていただけるメニューづくりを目指し、
+              <br />
+              旬の素材を使った季節限定のケーキや焼菓子、
+              <br />
+              パティシエのおすすめケーキなど、日々の商品開発に取り組んでいます。{" "}
+            </p>
+          </div>
+        </div>
+      </div>
+      {/* <img src="images/Cakehouse01.png" className="w-50 mt-5"></img> */}
 
-      <div  style={{ display: "flex", alignItems: "center", backgroundColor: "#F6F4EB"}}
+      <div
+        style={{
+          display: "flex",
+          alignItems: "center",
+          backgroundColor: "#F6F4EB",
+        }}
         className=" d-flex justify-content-center p-3"
       >
-        <img  style={{width:"11vh"}}
-          className="p-3" 
+        <img
+          style={{ width: "11vh" }}
+          className="p-3"
           src="images/9165471_cake_food_icon.png"
           alt=""
         />
         <h4 className="pt-2">蛋糕小知識</h4>
       </div>
 
-      <div  class="grid-container" style={{ backgroundColor: "#F6F4EB" }}>
+      <div class="grid-container" style={{ backgroundColor: "#F6F4EB" }}>
         <div data-aos="fade-up-right" class="grid-container m-4">
           <div class="image-container">
             <img src="images/baked03.jpg" id="image-with-arch" />
@@ -94,11 +113,13 @@ const News = () => {
         alt=""
       />
 
-      <div  style={{ display: "flex", alignItems: "center",}}
+      <div
+        style={{ display: "flex", alignItems: "center" }}
         className=" d-flex justify-content-center "
       >
-        <img  style={{width:"11vh"}}
-          className="p-3" 
+        <img
+          style={{ width: "11vh" }}
+          className="p-3"
           src="images/9165471_cake_food_icon.png"
           alt=""
         />

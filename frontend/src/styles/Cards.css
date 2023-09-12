@@ -302,7 +302,6 @@
 }
 
 #image-with-arch {
-    
     width: 55vh;
     height: 50vh;
     transform: rotate(0);
@@ -315,24 +314,62 @@
 #image-with-arch2 {
     transform-origin: 51% 51%;
     height: 50vh;
-    transform: rotate(0);   
+    transform: rotate(0);
     animation: rotation 3s linear infinite;
 }
 
 #image-with-arch3 {
     transform-origin: 51% 51%;
     height: 60vh;
-    transform: rotate(0);   
+    transform: rotate(0);
     animation: rotation 3s linear infinite;
 }
 
-@keyframes rotation{
-	
-  0%, 100%{
-    border-radius: 60% 87% 57% 68% / 50% 45% 78% 68%;
-  }
-  60%{
-    border-radius: 46% 60% 77% 88% / 70% 65% 58% 88%;
-  }
+@keyframes rotation {
+    0%,
+    100% {
+        border-radius: 60% 87% 57% 68% / 50% 45% 78% 68%;
+    }
+    60% {
+        border-radius: 46% 60% 77% 88% / 70% 65% 58% 88%;
+    }
 }
 
+#container01 {
+    width: 100%;
+    max-width: 1280px;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.bannerText {
+    height: 100%;
+    display: flex;
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: flex-start;
+    h1 {
+      font-size: 50px;
+      border-bottom: 1px solid #000;
+      small {
+        display: block;
+      }
+    }
+    h2 {
+      font-size: 30px;
+    }
+    p {
+      font-size: 20px;
+    }
+  }
+  .banner {
+    width: 100%;
+    height: 100vh;
+    
+    background: linear-gradient(115deg, #f4f1d5 50%, transparent 50%) center center /
+        100% 100%, 
+        url("https://www.s-swiss.com/wp/wp-content/uploads/2023/03/piece01-2.jpg")
+        right center / auto 100%;
+  
+    
+  }
