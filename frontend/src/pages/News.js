@@ -2,6 +2,7 @@ import React, { useRef, useState, useEffect } from "react";
 import "../styles/Cards.css";
 import AOS from "aos";
 import "aos/dist/aos.css"; // 导入 AOS 的样式文件
+import { Link } from "react-router-dom";
 
 const News = () => {
   useEffect(() => {
@@ -141,7 +142,8 @@ const News = () => {
       <div class="content-wrapper">
         <div class="grid-container">
           <div class="image-container">
-            <iframe data-aos="fade-up-right"
+            <iframe
+              data-aos="fade-up-right"
               class="iframecss"
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d37302.8741773248!2d136.97759827595834!3d35.458045194851735!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60031072879a9dc3%3A0x5293cf4c0284abc6!2zMS1jaMWNbWUtNyBBamlzYWlnYW9rYSwgTWlub2thbW8sIEdpZnUgNTA1LTAwMjnml6XmnKw!5e0!3m2!1szh-TW!2stw!4v1694509747308!5m2!1szh-TW!2stw"
               style={{ border: "0" }}
@@ -150,39 +152,51 @@ const News = () => {
               referrerPolicy="no-referrer-when-downgrade"
             ></iframe>
           </div>
-          <div data-aos="fade-left" class="text-content" >
-            <p className="container " style={{ fontWeight: "bold", fontFamily: "Kaisei Decol" }}>
+          <div data-aos="fade-left" class="text-content">
+            <p
+              className="container "
+              style={{ fontWeight: "bold", fontFamily: "Kaisei Decol" }}
+            >
               スイス下通店
-              <hr  />
-              <span className="p-2">
-              所在地 :  
-              </span>
-               〒860-0801 熊本市中央区安政町5-2
               <hr />
-              <span className="p-2" >
-              電話番号 :
-              </span>
-                  096-352-1251
+              <span className="p-2">所在地 :</span>
+              〒860-0801 熊本市中央区安政町5-2
               <hr />
-              <span className="p-2" >
-              FAX :
-              </span>
-                 096-352-1252
+              <span className="p-2">電話番号 :</span>
+              096-352-1251
               <hr />
-              <span className="p-2" >
-              営業時間:
-              </span>
-               10:00 - 21:00
+              <span className="p-2">FAX :</span>
+              096-352-1252
+              <hr />
+              <span className="p-2">営業時間:</span>
+              10:00 - 21:00
               <hr />
             </p>
-          </div>        
+          </div>
         </div>
         <img
-        style={{ backgroundColor: "#F6F4EB" }}
-        src="images/bg-info-bottom.png"
-        alt=""
-      />
+          style={{ backgroundColor: "#FFF8D6" }}
+          src="images/bg-info-bottom.png"
+          alt=""
+        />
       </div>
+      <div style={{ backgroundColor: "#FFF8D6" }}>
+        <br />
+        <br />
+        <br />
+        <div className="image-cake">
+          <img className="cakehouse" src="images/slide3.webp" alt="" />
+          <img data-aos="fade-left"
+            className="Chocolatecake"         
+            src="https://www.s-swiss.com/assets/image/home/obj_item3.png"
+            alt=""
+          />
+          <div className="caketext"   style={{ fontWeight: "bold", fontFamily: "Kaisei Decol" }}>
+          生活は美味しいケーキのようで、各層には驚きと喜びが詰まっています。そして、甘い味わいは私たちの心にずっと残ります。
+      </div>
+        </div>
+      </div>
+    
     </>
   );
 };

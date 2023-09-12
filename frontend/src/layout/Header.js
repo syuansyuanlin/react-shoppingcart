@@ -44,7 +44,7 @@ const Header = ({loginStatus, setLoginStatus, navVisible, setNavVisible}) => {
           >
             <span className="navbar-toggler-icon"></span>
           </button>
-          <div className="collapse navbar-collapse">
+          <div className="collapse navbar-collapse" style={{fontWeight: "bold", }}>
             <ul className="navbar-nav me-auto">
               <li className="nav-item">
                 <Link to="/" class="nav-link">
