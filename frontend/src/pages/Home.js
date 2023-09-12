@@ -7,8 +7,8 @@ import { Button, CardActionArea, CardActions } from "@mui/material";
 import "../styles/Cards.css";
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
-import AOS from 'aos';
-import 'aos/dist/aos.css'; // 导入AOS的样式文件
+import AOS from "aos";
+import "aos/dist/aos.css"; // 导入AOS的样式文件
 
 const Home = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -34,7 +34,7 @@ const Home = () => {
     AOS.init({
       duration: 1000, // 动画持续时间（以毫秒为单位）
       // easing: 'ease-in-out', // 缓动函数
-      once: true // 是否只执行一次
+      once: true, // 是否只执行一次
     });
   }, []); // [] 作为第二个参数，确保 useEffect 只在组件加载时运行一次
 
@@ -47,22 +47,27 @@ const Home = () => {
           <br />
           都猶如一塊精心製作的蛋糕般甜蜜。
         </div>
+        
         <div>
-          <h5
-            className=" p-5 text-center"
-            style={{ color: "rgb(150, 126, 118)" }}
+          <h5 
+            className=" p-4 text-center"
+            style={{ color: "rgb(150, 126, 118)",}}
           >
-            每一層蛋糕都蘊藏著愛與甜蜜，為你的時刻增添幸福滋味，愜意享受每個美味瞬間。
+           每一層蛋糕都蘊藏著愛與甜蜜，為你的時刻增添幸福滋味，愜意享受每個美味瞬間。
           </h5>
         </div>
-        
-        <div data-aos="fade-right"  data-aos-offset="600" class="content-wrapper">
+
+        <div
+          data-aos="fade-right"
+          data-aos-offset="600"
+          class="content-wrapper"
+        >
           <div class="grid-container">
             <div class="image-container">
               <img src="images/84774.jpeg" class="images84774" />
             </div>
-            <div   class="text-content">
-              <img 
+            <div class="text-content">
+              <img
                 className="p-3"
                 src="https://j-croissant.jp/wp/wp-content/themes/j-croissant/assets/img/quality/quality_1.svg"
                 alt=""
@@ -75,8 +80,8 @@ const Home = () => {
             </div>
           </div>
         </div>
-        
-        <div data-aos="fade-left"  data-aos-offset="700" class="content-wrapper">
+
+        <div data-aos="fade-left" data-aos-offset="700" class="content-wrapper">
           <div class="grid-container1">
             <div class="image-container">
               <img src="images/79383.jpeg" class="images84774" />
@@ -95,8 +100,8 @@ const Home = () => {
             </div>
           </div>
         </div>
-       
-        <div data-aos="fade-right"  data-aos-offset="800" class="grid-container">
+
+        <div data-aos="fade-right" data-aos-offset="800" class="grid-container">
           <div class="image-container">
             <img src="images/photo-79.webp" class="images84774" />
           </div>
@@ -116,7 +121,11 @@ const Home = () => {
         <div className=" mt-5  text-center">
           <h4>最新消息</h4>
         </div>
-        <div data-aos="fade-up" data-aos-offset="600" className="container d-flex justify-content-center p-3">
+        <div
+          data-aos="fade-up"
+          data-aos-offset="600"
+          className="container d-flex justify-content-center p-3"
+        >
           <Card
             className="m-3"
             sx={{ maxWidth: 345 }}
@@ -235,7 +244,6 @@ const Home = () => {
             </Link>
           </button>
         </div>
-      
       </div>
     </>
   );
