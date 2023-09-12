@@ -32,7 +32,7 @@ const Header = ({loginStatus, setLoginStatus, navVisible, setNavVisible}) => {
                 display: "flex",
                 alignItems: "center",
               }}
-              src="images/shop1.png"
+              src="images/cakebb23.png"
               alt=""
             />
           </a>

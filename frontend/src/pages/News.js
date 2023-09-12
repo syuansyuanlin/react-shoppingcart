@@ -1,68 +1,121 @@
-import React,{ useRef, useState }  from 'react';
+import React, { useRef, useState, useEffect } from "react";
 import "../styles/Cards.css";
-
+import AOS from 'aos';
+import 'aos/dist/aos.css'; // 导入 AOS 的样式文件
 
 const News = () => {
 
-  
+  useEffect(() => {
+    AOS.init({
+      duration: 1200, // 动画持续时间（以毫秒为单位）
+      once: true // 是否只执行一次
+    });
+  }, []); // [] 
+
   return (
     <>
+      <br />
+      <br />
+      <br />
+      <br />
+
+      <div  style={{ display: "flex", alignItems: "center", backgroundColor: "#F6F4EB"}}
+        className=" d-flex justify-content-center p-3"
+      >
+        <img  style={{width:"11vh"}}
+          className="p-3" 
+          src="images/9165471_cake_food_icon.png"
+          alt=""
+        />
+        <h4 className="pt-2">蛋糕小知識</h4>
+      </div>
+
+      <div  class="grid-container" style={{ backgroundColor: "#F6F4EB" }}>
+        <div data-aos="fade-up-right" class="grid-container m-4">
+          <div class="image-container">
+            <img src="images/baked03.jpg" id="image-with-arch" />
+          </div>
+          <div class="text-content">
+            <h4 className="container">
+              經典年輪蛋糕{" "}
+              <span style={{ fontWeight: "bold" }}>
+                クラシックバウムクーヘン
+              </span>
+            </h4>
+            <p className="container">
+              年輪蛋糕起源於1807年德國，有深深祝福與圓滿⻑久的含義當其橫斷切開時，年輪蛋糕呈現了特徵性的金色環圈，而使之得「年輪」之名層層的紋理和樹椿般的外型，富有「德國蛋糕之王」的美譽。
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="content-wrapper" style={{ backgroundColor: "#F6F4EB" }}>
+        <div data-aos="fade-up-left" class="grid-container1">
+          <div class="image-container">
+            <img src="images/baked02.jpg" id="image-with-arch2" />
+          </div>
+          <div class="text-content">
+            <h4 className="container">
+              瑪德蓮蛋糕{" "}
+              <span style={{ fontWeight: "bold" }}>マドレーヌ くるみ</span>
+            </h4>
+            <p className="container">
+              是一種傳統的貝殼形狀的小蛋糕，以濃稠且呈膏狀的質地為特點，
+              <br />
+              18世紀路易十五的岳父、波蘭國王、洛林公爵斯坦尼斯瓦夫一世的一位女廚師，
+              <br />
+              斯坦尼斯瓦夫一世將此蛋糕由洛林推廣到凡爾賽宮廷以及整個法國。
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid-container" style={{ backgroundColor: "#F6F4EB" }}>
+        <div data-aos="zoom-out-up" class="grid-container m-4">
+          <div class="image-container">
+            <img src="images/baked06.jpg" id="image-with-arch3" />
+          </div>
+          <div class="text-content">
+            <h4 className="container">
+              卡瑪貝爾乳酪{" "}
+              <span style={{ fontWeight: "bold" }}>カマンベルン</span>
+            </h4>
+            <p className="container">
+              是一種法國的乳酪，通常以其圓形和濃郁的風味而聞名。 <br />
+              它是一種軟質乳酪，通常製作自牛奶，並且在熟成期間會變得非常軟和奶香四溢。
+            </p>
+          </div>
+        </div>
+      </div>
 
       <img
-        src="images/freeg-97.jpg"
-        className="w-100 mt-0"
-        id="images143"
-      ></img>
-      <div className="container d-flex justify-content-center p-3">
-        <h3>關於我們</h3>
-      </div>
-      <div className="text3">
-        ケーキを通して 多くの人に楽しさを
-        <br />
-        透過精心製作的蛋糕，為眾多人帶來無盡的愉悅與喜悅。
-      </div>
-      <div className="container d-flex justify-content-center p-3">
-        <h2
-          className="text-center "
-          style={{ color: "rgb(150, 126, 118)" }}
-          id="textkeyframes"
-        >
-          <h4>ケーキを通して 多くの人に楽しさを</h4>
-        </h2>
-      </div>
-      <div
-        className="container d-flex justify-content-center"
-        id="textkeyframes"
-      >
-        <p className="text-center ">
-          連接人們的蛋糕
-          <br />
-          <br />
-          我們一邊製作蛋糕，一邊想著靠近蛋糕帶回家的“超越”，
-          <br />
-          <br />
-          我們在商店裡與顧客交談。
-          <br />
-          <br />
-          在松樹的早晨，將被烘焙奶油泡芙的香氣所籠罩。
-          <br />
-          <br />
-          我們正在等待您製作這樣一種蛋糕，它充分利用了成分，
-          <br />
-          <br />
-          具有高品質但有點緩解的味道，並給您一點 松樹味。 <br />
-          <br />
-          無論是生日，慶祝日還是普通的日子，分享您感受到的快樂， 因為它很好吃。
-        </p>
-      </div>
-      <img src="images/6452.jpeg" className=" container d-flex justify-content-center mb-4" id="images143" style={{ width: "600px", height: "350px", }}></img>
+        style={{ backgroundColor: "#F6F4EB" }}
+        src="images/bg-info-top.png"
+        alt=""
+      />
 
-      
-    <div>
-      
-    </div>
-  
-     
+      <div  style={{ display: "flex", alignItems: "center",}}
+        className=" d-flex justify-content-center "
+      >
+        <img  style={{width:"11vh"}}
+          className="p-3" 
+          src="images/9165471_cake_food_icon.png"
+          alt=""
+        />
+        <h4 className="pt-2">聯絡我們</h4>
+      </div>
+
+      <div>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d37302.8741773248!2d136.97759827595834!3d35.458045194851735!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60031072879a9dc3%3A0x5293cf4c0284abc6!2zMS1jaMWNbWUtNyBBamlzYWlnYW9rYSwgTWlub2thbW8sIEdpZnUgNTA1LTAwMjnml6XmnKw!5e0!3m2!1szh-TW!2stw!4v1694509747308!5m2!1szh-TW!2stw"
+          width="400"
+          height="300"
+          style={{ border: "0" }}
+          allowFullScreen
+          loading="lazy"
+          referrerPolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
     </>
   );
 };

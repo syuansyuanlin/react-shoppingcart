@@ -300,3 +300,39 @@
     width: 50%; /* 文字寬度佔一半，可以根據需要調整 */
     padding: 20px;
 }
+
+#image-with-arch {
+    
+    width: 55vh;
+    height: 50vh;
+    transform: rotate(0);
+    transform-origin: 51% 51%;
+    animation: rotation 3s linear infinite;
+
+    /* 剪切路径定义一个拱门形状 */
+}
+
+#image-with-arch2 {
+    transform-origin: 51% 51%;
+    height: 50vh;
+    transform: rotate(0);   
+    animation: rotation 3s linear infinite;
+}
+
+#image-with-arch3 {
+    transform-origin: 51% 51%;
+    height: 60vh;
+    transform: rotate(0);   
+    animation: rotation 3s linear infinite;
+}
+
+@keyframes rotation{
+	
+  0%, 100%{
+    border-radius: 60% 87% 57% 68% / 50% 45% 78% 68%;
+  }
+  60%{
+    border-radius: 46% 60% 77% 88% / 70% 65% 58% 88%;
+  }
+}
+

@@ -7,6 +7,7 @@ import Cart from "./pages/Cart";
 import { useState } from "react";
 import Layout from "./layout/Layout";
 
+
 function App() {
   // 購物車
   const [cart, setCart] = useState([]);
@@ -16,6 +17,7 @@ function App() {
   return (
     <div className="App">
       <BrowserRouter>
+     
         <Routes>
           <Route path="/" element={<Layout cart={cart} loginStatus={loginStatus} setLoginStatus={setLoginStatus}/>}>
             <Route index element={<Home />} />

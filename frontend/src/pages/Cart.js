@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import "../styles/Cart.css";
+import { Link } from "react-router-dom";
+
 
 const Cart = (props) => {
   const { cart, setCart } = props;
- 
 
   console.log("[購物車]：", cart);
 
@@ -25,79 +26,91 @@ const Cart = (props) => {
     setCart(updatedCart);
   };
 
-
-
   return (
     <div>
       <br />
       <br />
       <br />
       <br />
-      <div className="alert text-center" style={{height:"100px"}} role="alert">
+      <br />
+       {/* 判斷購物車是否為空，如果 cart 陣列的長度為 0，則顯示請選擇商品，若cart有商品則渲染出畫面*/}
+      {cart.length === 0 ? (
+        <div>
+        <div
+          className="alert text-center"
+          style={{ height: "100px" }}
+          role="alert"
+        >
           請選擇商品
         </div>
-        <div className="alert alert-secondary text-center" role="alert">
+        <div style={{backgroundColor:"#FAF3F0"}} className="alert alert-secondary text-center" role="alert">
           尚未建立訂單！
         </div>
-      <table className="table">
-        <thead>
-          <tr>
-            <th style={{ color: "#3F2E3E" }} className="col-1 col-md-4">
-              品項
-            </th>
-            <th style={{ color: "#3F2E3E" }}>價格</th>
-            <th style={{ color: "#3F2E3E" }}>數量</th>
-            <th style={{ color: "#3F2E3E" }}>小計</th>
-          </tr>
-        </thead>
-        <tbody>
-          {/* 要使用可選串連，因為 cart 可能是 undefined */}
-          {cart?.map((item, index) => {
-            return (
-              <tr key={index}>
-                <img
-                  style={{
-                    width: "150px",
-                    height: "100px",
-                    objectFit: "cover",
-                  }}
-                  src={item?.link}
-                  alt=""
-                />
-                <h6
-                  style={{
-                    fontSize: 18,
-                    color: "white",
-                    fontWeight: "bold",
-                    textAlign: "center",
-                    textShadow: "1px 1px 3px rgba(51, 29, 44, 0.9)",
-                  }}
-                >
-                  {item.name}
-                </h6>
-
-                <td style={{ color: "#85A389", fontWeight: "bold" }}>
-                  ${item.price}
-                </td>
-                <td>x {item.quantity}</td>
-                <td style={{ color: "#85A389", fontWeight: "bold" }}>
-                  ${item.price * item.quantity}
-                </td>
-                <button
-                  style={{ color: "rgb(150, 126, 118)" }}
-                  onClick={() => handleRemoveItem(item)}
-                >
-                  刪除品項
-                </button>
+       
+        </div>
+        
+      ) : (
+        <div>
+          <table className="table">
+            <thead>
+              <tr>
+                <th style={{ color: "#3F2E3E" }} className="col-1 col-md-4">
+                  品項
+                </th>
+                <th style={{ color: "#3F2E3E" }}>價格</th>
+                <th style={{ color: "#3F2E3E" }}>數量</th>
+                <th style={{ color: "#3F2E3E" }}>小計</th>
               </tr>
-            );
-          })}
-        </tbody>
-      </table>
-      <div className="calculateTotal">
-        <h5>總計：${calculateTotal()}</h5>
-      </div>
+            </thead>
+            <tbody>
+              {/* 要使用可選串連，因為 cart 可能是 undefined */}
+              {cart?.map((item, index) => {
+                return (
+                  <tr key={index}>
+                    <img
+                      style={{
+                        width: "150px",
+                        height: "100px",
+                        objectFit: "cover",
+                      }}
+                      src={item?.link}
+                      alt=""
+                    />
+                    <h6
+                      style={{
+                        fontSize: 18,
+                        color: "white",
+                        fontWeight: "bold",
+                        textAlign: "center",
+                        textShadow: "1px 1px 3px rgba(51, 29, 44, 0.9)",
+                      }}
+                    >
+                      {item.name}
+                    </h6>
 
+                    <td style={{ color: "#85A389", fontWeight: "bold" }}>
+                      ${item.price}
+                    </td>
+                    <td>x {item.quantity}</td>
+                    <td style={{ color: "#85A389", fontWeight: "bold" }}>
+                      ${item.price * item.quantity}
+                    </td>
+                    <button
+                      style={{ color: "rgb(150, 126, 118)" }}
+                      onClick={() => handleRemoveItem(item)}
+                    >
+                      刪除品項
+                    </button>
+                  </tr>
+                );
+              })}
+            </tbody>
+          </table>
+          <div className="calculateTotal">
+            <h5>總計：${calculateTotal()}</h5>
+          </div>
+        </div>
+      )}
 
       <hr />
       <div style={{ marginLeft: "20px" }}>

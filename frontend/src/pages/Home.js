@@ -32,7 +32,7 @@ const Home = () => {
 
   useEffect(() => {
     AOS.init({
-      duration: 1200, // 动画持续时间（以毫秒为单位）
+      duration: 1000, // 动画持续时间（以毫秒为单位）
       // easing: 'ease-in-out', // 缓动函数
       once: true // 是否只执行一次
     });
@@ -116,7 +116,7 @@ const Home = () => {
         <div className=" mt-5  text-center">
           <h4>最新消息</h4>
         </div>
-        <div className="container d-flex justify-content-center p-3">
+        <div data-aos="fade-up" data-aos-offset="600" className="container d-flex justify-content-center p-3">
           <Card
             className="m-3"
             sx={{ maxWidth: 345 }}
@@ -217,6 +217,7 @@ const Home = () => {
             </CardActions>
           </Card>
         </div>
+
         <br />
         <div className="container" style={{ backgroundColor: "#F1F6F9" }}>
           <img
