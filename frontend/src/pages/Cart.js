@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import "../styles/Cart.css";
 import { Link } from "react-router-dom";
 
-
 const Cart = (props) => {
   const { cart, setCart } = props;
 
@@ -33,22 +32,25 @@ const Cart = (props) => {
       <br />
       <br />
       <br />
-       {/* 判斷購物車是否為空，如果 cart 陣列的長度為 0，則顯示請選擇商品，若cart有商品則渲染出畫面*/}
+
+      {/* 判斷購物車是否為空，如果 cart 陣列的長度為 0，則顯示請選擇商品，若cart有商品則渲染出畫面*/}
       {cart.length === 0 ? (
         <div>
-        <div
-          className="alert text-center"
-          style={{ height: "100px" }}
-          role="alert"
-        >
-          請選擇商品
+          <div
+            className="alert text-center"
+            style={{ height: "100px" }}
+            role="alert"
+          >
+            請選擇商品
+          </div>
+          <div
+            style={{ backgroundColor: "#FAF3F0" }}
+            className="alert alert-secondary text-center"
+            role="alert"
+          >
+            尚未建立訂單！
+          </div>
         </div>
-        <div style={{backgroundColor:"#FAF3F0"}} className="alert alert-secondary text-center" role="alert">
-          尚未建立訂單！
-        </div>
-       
-        </div>
-        
       ) : (
         <div>
           <table className="table">

@@ -32,7 +32,7 @@ const Home = () => {
 
   useEffect(() => {
     AOS.init({
-      duration: 1000, // 动画持续时间（以毫秒为单位）
+      duration: 1100, // 动画持续时间（以毫秒为单位）
       // easing: 'ease-in-out', // 缓动函数
       once: true, // 是否只执行一次
     });
@@ -47,83 +47,108 @@ const Home = () => {
           <br />
           都猶如一塊精心製作的蛋糕般甜蜜。
         </div>
-        
-        <div>
-          <h5 
-            className=" p-4 text-center"
-            style={{ color: "rgb(150, 126, 118)",}}
+        <br />
+
+        <div className="cakes-section">
+          <div
+            data-aos="fade-right"
+            data-aos-offset="600"
+            class="content-wrapper"
           >
-           每一層蛋糕都蘊藏著愛與甜蜜，為你的時刻增添幸福滋味，愜意享受每個美味瞬間。
-          </h5>
-        </div>
+            <div class="grid-container">
+              <div class="image-container">
+                <img src="images/84774.jpeg" class="images84774" />
+              </div>
+              <div class="text-content">
+                <img
+                  id="numberimg"
+                  className="p-3"
+                  src="https://j-croissant.jp/wp/wp-content/themes/j-croissant/assets/img/quality/quality_1.svg"
+                  alt=""
+                />
+                <p className="container" id="hometext">
+                  混合了來自北海道和長野縣的三種小麥粉，包括全麥麵粉，
+                  <br />
+                  具有獨特的黃金比例，最能突出麵團的鮮味。
+                </p>
+              </div>
+            </div>
+          </div>
 
-        <div
-          data-aos="fade-right"
-          data-aos-offset="600"
-          class="content-wrapper"
-        >
-          <div class="grid-container">
+          <div
+            data-aos="fade-left"
+            data-aos-offset="700"
+            class="content-wrapper"
+          >
+            <div class="grid-container1">
+              <div class="image-container">
+                <img src="images/79383.jpeg" class="images84774" />
+              </div>
+              <div class="text-content">
+                <img
+                  className="p-3"
+                  src="https://j-croissant.jp/wp/wp-content/themes/j-croissant/assets/img/quality/quality_2.svg"
+                  alt=""
+                />
+                <p className="container" id="hometext">
+                  選用當季新鮮水果、堅持使用在地小農種植的天然食材，
+                  <br />
+                  不使用人工香料及膨鬆劑等添加物，溫暖心房，愉悅每刻。
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div
+            data-aos="fade-right"
+            data-aos-offset="800"
+            class="grid-container"
+          >
             <div class="image-container">
-              <img src="images/84774.jpeg" class="images84774" />
+              <img src="images/photo-79.webp" class="images84774" />
             </div>
             <div class="text-content">
               <img
                 className="p-3"
-                src="https://j-croissant.jp/wp/wp-content/themes/j-croissant/assets/img/quality/quality_1.svg"
+                src="https://j-croissant.jp/wp/wp-content/themes/j-croissant/assets/img/quality/quality_3.svg"
                 alt=""
               />
-              <p className="container">
-                混合了來自北海道和長野縣的三種小麥粉，包括全麥麵粉，
+              <p className="container" id="hometext">
+                純糖僅由奄美群島的甘蔗原料製成，並緩慢烘烤以形成天然晶體，
                 <br />
-                具有獨特的黃金比例，最能突出麵團的鮮味。
+                因此富含礦物質並緊緊鎖住風味。 這是一種溫和的天然甜味。
               </p>
             </div>
           </div>
         </div>
 
-        <div data-aos="fade-left" data-aos-offset="700" class="content-wrapper">
-          <div class="grid-container1">
-            <div class="image-container">
-              <img src="images/79383.jpeg" class="images84774" />
-            </div>
-            <div class="text-content">
-              <img
-                className="p-3"
-                src="https://j-croissant.jp/wp/wp-content/themes/j-croissant/assets/img/quality/quality_2.svg"
-                alt=""
-              />
-              <p className="container">
-                選用當季新鮮水果、堅持使用在地小農種植的天然食材，
-                <br />
-                不使用人工香料及膨鬆劑等添加物，溫暖心房，愉悅每刻。
-              </p>
-            </div>
-          </div>
+        <div className="item mt-5">
+        <div className="pic">
+          <img className="bananacake" src="images/slide2.webp" />        
         </div>
+        <div data-aos="fade-left" data-aos-offset="800" class="txt" >     
+          <h2 style={{ fontWeight: "bold", fontFamily: "Kaisei Decol" }}>素材から厳選し 丁寧に作り上げるお菓子</h2>
+          <p>
+          美味的味道源自於兩個關鍵要素：食材的精選和烹飪技巧的獨特組合。 <br/>我們一直致力於每個環節都提供新鮮的食材，絕不偷工減料。 雖然這可能效率不高，但我們堅持小心翼翼、穩定不變。 久違的美味就是從這個理念中孕育而生的。{" "}
+          </p>
 
-        <div data-aos="fade-right" data-aos-offset="800" class="grid-container">
-          <div class="image-container">
-            <img src="images/photo-79.webp" class="images84774" />
-          </div>
-          <div class="text-content">
-            <img
-              className="p-3"
-              src="https://j-croissant.jp/wp/wp-content/themes/j-croissant/assets/img/quality/quality_3.svg"
-              alt=""
-            />
-            <p className="container">
-              純糖僅由奄美群島的甘蔗原料製成，並緩慢烘烤以形成天然晶體，
-              <br />
-              因此富含礦物質並緊緊鎖住風味。 這是一種溫和的天然甜味。
-            </p>
-          </div>
+          <button class="cta">
+          <Link style={{ fontWeight: "bold", fontFamily: "Kaisei Decol" }} className="hover-underline-animation" to="Cards">
+              View more
+            </Link>
+            <svg viewBox="0 0 46 16" height="10" width="30" xmlns="http://www.w3.org/2000/svg" id="arrow-horizontal">
+          <path transform="translate(30)" d="M8,0,6.545,1.455l5.506,5.506H-30V9.039H12.052L6.545,14.545,8,16l8-8Z" data-name="Path 10" id="Path_10"></path>
+          </svg>
+          </button>
         </div>
+      </div>
+
         <div className=" mt-5  text-center">
-          <h4>最新消息</h4>
+          <h4 style={{ fontWeight: "bold", fontFamily: "Kaisei Decol" }}>News</h4>
         </div>
         <div
           data-aos="fade-up"
-          data-aos-offset="600"
+          data-aos-offset="800"
           className="container d-flex justify-content-center p-3"
         >
           <Card
@@ -139,7 +164,7 @@ const Home = () => {
                 alt="green iguana"
               />
               <CardContent>
-                <Typography gutterBottom variant="h6" component="div">
+                <Typography  gutterBottom variant="h6" component="div">
                   熱門甜點【丸五戶桃子蛋糕】和限量食用的“時令凍糕桃子”
                 </Typography>
                 <Typography variant="body2" color="text.secondary">
@@ -226,25 +251,9 @@ const Home = () => {
             </CardActions>
           </Card>
         </div>
-
-        <br />
-        <div className="container" style={{ backgroundColor: "#F1F6F9" }}>
-          <img
-            className="container"
-            src="images/114714.png"
-            style={{ width: "200vh" }}
-            alt=""
-          />
-          <div className="container">
-            生活就像一塊美味的蛋糕，每一層都充滿了驚喜與喜悅，而甜蜜的滋味會一直留在我們心中。
-          </div>
-          <button className="">
-            <Link className="" to="Cards">
-              查看商品
-            </Link>
-          </button>
-        </div>
       </div>
+    
+
     </>
   );
 };

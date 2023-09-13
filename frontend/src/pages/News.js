@@ -62,7 +62,7 @@ const News = () => {
           <div class="image-container">
             <img src="images/baked03.jpg" id="image-with-arch" />
           </div>
-          <div class="text-content">
+          <div class="text-content" id="newcake">
             <h4 className="container">
               經典年輪蛋糕{" "}
               <span style={{ fontWeight: "bold", fontFamily: "Kaisei Decol" }}>
@@ -180,6 +180,7 @@ const News = () => {
           alt=""
         />
       </div>
+      <div>
       <div style={{ backgroundColor: "#FFF8D6" }}>
         <br />
         <br />
@@ -196,7 +197,7 @@ const News = () => {
       </div>
         </div>
       </div>
-    
+      </div>
     </>
   );
 };

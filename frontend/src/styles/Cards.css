@@ -1,3 +1,8 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
 .content-wrapper {
     width: 100%;
 }
@@ -36,12 +41,13 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 24px;
+    font-size: 1.5rem;
     color: white;
-    text-shadow: 1px 2px 3px rgba(11, 10, 10, 0.847);
+    text-shadow: 1px 2px 3px rgba(11, 10, 10, 0.9);
     padding: 10px 20px;
 }
 #images143 {
+    display: flex;
     opacity: 0; /* 初始状态设置为透明 */
     animation: fadeInAndStayVisible 2s ease-in-out forwards;
 }
@@ -56,11 +62,12 @@
 }
 
 .images84774 {
-    width: 600px;
-    height: 400px;
+    width: 100vh;
+    height: 70vh;
     padding-left: 20px;
     padding-top: 20px;
     border-radius: 50px;
+  
 }
 
 .hometext {
@@ -349,17 +356,17 @@
     justify-content: center;
     align-items: flex-start;
     h1 {
-        font-size: 50px;
+        font-size: 3rem;
         border-bottom: 1px solid #000;
         small {
             display: block;
         }
     }
     h2 {
-        font-size: 30px;
+        font-size: 1rem;
     }
     p {
-        font-size: 20px;
+        font-size: 1rem;
     }
 }
 .banner {
@@ -394,10 +401,130 @@
 }
 .image-cake {
     position: relative; /* 使 .image-container 成为定位上下文 */
-    height: 500px;
+    height: 80vh;
 }
 .caketext {
     float: right;
     width: 50%; /* 根据需要调整文本宽度 */
     padding: 100px;
+}
+
+
+.item{
+	display: flex;
+	align-items: center;
+	margin-bottom: 70px;
+	
+}
+.item .txt{
+
+	width: 55%;
+	flex-shrink: 0;
+	padding: 50px 30px;
+	box-sizing: border-box;
+	position: relative;
+	z-index: 1;
+    background-color: rgba(250, 241, 210, 0.8);
+}
+.item > :first-child{
+	margin-right: -10%;
+    
+}
+
+.bananacake {
+    width: 100%;
+    border-top-right-radius: 50px; /* 右上角圆角 */
+    border-bottom-right-radius: 50px; /* 右下角圆角 */
+}
+
+.cta {
+    border: none;
+    background: none;
+  }
+  
+  .cta span {
+    padding-bottom: 7px;
+    letter-spacing: 4px;
+    font-size: 14px;
+    padding-right: 15px;
+    text-transform: uppercase;
+  }
+  
+  .cta svg {
+    transform: translateX(-8px);
+    transition: all 0.3s ease;
+  }
+  
+  .cta:hover svg {
+    transform: translateX(0);
+  }
+  
+  .cta:active svg {
+    transform: scale(0.9);
+  }
+  
+  .hover-underline-animation {
+    position: relative;
+    color: black;
+    padding-bottom: 20px;
+    padding-right: 20px;
+    text-decoration: none;
+  }
+  
+  .hover-underline-animation:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #000000;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+  
+  .cta:hover .hover-underline-animation:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+
+  
+@media screen and (max-width: 768px) {
+    .images84774 {
+        width: 50vw;
+        height: 40vw;
+        flex-direction: column;
+    }
+    .text3 {
+        display: none;
+    }
+    #hometext {
+        flex-direction: column;
+        flex-wrap: wrap;
+        font-size: 12px;
+    }
+    #image-with-arch,
+    #image-with-arch2,
+    #image-with-arch3 {
+        width: 15vh;
+        height: 15vh;
+        flex-direction: column;
+    }
+    #newcaketext {
+        display: flex;
+        flex-direction: column;
+    }
+    .cakehouse{
+        width: 100vw;
+       
+    }
+    .caketext {
+        display: none;
+    }
+    .Chocolatecake {
+        width: 30vw;
+        left: 40vw;
+        top: 60vw;
+    }
 }

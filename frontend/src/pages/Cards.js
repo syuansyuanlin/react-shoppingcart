@@ -2,7 +2,8 @@ import React, {useEffect, useState} from "react";
 import "../styles/Cards.css";
 import {CenterModal} from "../layout/CenterModal";
 import mockCakes from "../model/mock/Cakes";
-
+import AOS from 'aos';
+import 'aos/dist/aos.css'; // 导入 AOS 的样式文件
 
 const MyCards = (props) => {
   const { cart, setCart } = props;
@@ -13,6 +14,13 @@ const MyCards = (props) => {
       return {...cake, quantity: 0};
     }));
   }, []);
+
+  useEffect(() => {
+    AOS.init({
+      duration: 1200, // 动画持续时间（以毫秒为单位）
+      once: true // 是否只执行一次
+    });
+  }, []); 
 
   // 彈跳視窗
   const [modalConfig, setModalConfig] = React.useState({show: false, content: ""});
@@ -68,12 +76,13 @@ const MyCards = (props) => {
   return (
     <>
       <img src="images/mv.jpg" className="w-100 mt-5"></img>
-      <div className="container ">
+
+      <div   className="container ">
         <div className="row ">
           {cakes.map((item, index) => (
             <div
               key={index}
-              className="container mt-5   p-2 mb-3 "
+              className="container mt-4  mb-3 "
               style={{ width: "15rem", border: "none" }}
             >
               <img
@@ -169,6 +178,12 @@ const MyCards = (props) => {
       <CenterModal show={modalConfig.show} onHide={() => setModalConfig(prevState => {
         return {...prevState, show: false}
       })} title={'加入購物車'} content={modalConfig?.content} img={modalConfig?.img}/>
+
+        <img className="pb-3"
+          style={{ backgroundColor: "#faf3f0" }}
+          src="images/bg-info-bottom.png"
+          alt=""
+        />
     </>
   );
 };
