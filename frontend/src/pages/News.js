@@ -138,7 +138,6 @@ const News = () => {
         <h4 className="pt-2">聯絡我們</h4>
       </div>
 
-      <div></div>
       <div class="content-wrapper">
         <div class="grid-container">
           <div class="image-container">

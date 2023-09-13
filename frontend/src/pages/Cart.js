@@ -108,8 +108,8 @@ const Cart = (props) => {
               })}
             </tbody>
           </table>
-          <div className="calculateTotal">
-            <h5>總計：${calculateTotal()}</h5>
+          <div className="calculateTotal  ">
+            <h5 className="">總計：${calculateTotal()}</h5>
           </div>
         </div>
       )}

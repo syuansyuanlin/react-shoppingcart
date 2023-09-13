@@ -32,7 +32,7 @@ const Home = () => {
 
   useEffect(() => {
     AOS.init({
-      duration: 1100, // 动画持续时间（以毫秒为单位）
+      duration: 1000, // 动画持续时间（以毫秒为单位）
       // easing: 'ease-in-out', // 缓动函数
       once: true, // 是否只执行一次
     });

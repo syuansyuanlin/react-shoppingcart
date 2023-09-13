@@ -42,11 +42,11 @@ const Footer = () => {
 
           <ul class="nav__ul nav__ul--extra">
             <li>
-              <a href="frontend/src/layout/footer#Footer.js">Instagram</a>
+            <a href="#"><img style={{width:"2rem"}} src="./images/2993766_instagram_social media_icon.svg" alt="facebook" /></a>
             </li>
 
             <li>
-              <a href="frontend/src/layout/footer#Footer.js">@syuan</a>
+            <a href="#"><img style={{width:"2rem"}} src="./images/2609541_facebook_media_social_icon.svg" alt="facebook" /></a>
             </li>
 
             
@@ -73,7 +73,7 @@ const Footer = () => {
       </ul>
 
       <div class="legal">
-        <p>&copy; 2023 Something. All rights reserved.</p>
+        <p>&copy; 2023 Jessie Lin. All rights reserved.</p>
 
         
       </div>
